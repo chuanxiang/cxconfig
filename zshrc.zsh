@@ -28,6 +28,7 @@ antigen bundle git
 antigen bundle pip
 antigen bundle command-not-found
 antigen bundle Tarrasch/zsh-autoenv
+antigen bundle marlonrichert/zsh-autocomplete@main
 
 # https://github.com/agnoster/agnoster-zsh-theme
 # git clone https://github.com/powerline/fonts.git --depth=1 && fonts/install.sh && rm -rf fonts
@@ -65,3 +66,7 @@ prompt_end0() {
 }
 
 unsetopt share_history
+
+autoload -U promptinit
+promptinit
+prompt fade blue
