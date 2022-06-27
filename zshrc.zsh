@@ -24,21 +24,25 @@ export PYTHON_CONFIGURE_OPTS="--enable-shared"
 # curl -L git.io/antigen > ~/.antigen.zsh
 source ~/.antigen.zsh
 
+antigen use oh-my-zsh
 antigen bundle git
 antigen bundle pip
 antigen bundle command-not-found
+antigen bundle docker
 antigen bundle Tarrasch/zsh-autoenv
-antigen bundle marlonrichert/zsh-autocomplete@main
+antigen bundle zsh-users/zsh-completions
+antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle zsh-users/zsh-syntax-highlighting
+
 
 # https://github.com/agnoster/agnoster-zsh-theme
 # git clone https://github.com/powerline/fonts.git --depth=1 && fonts/install.sh && rm -rf fonts
 # sudo apt-get install fonts-powerline
 
 # antigen theme agnoster
+# antigen theme geoffgarside
+antigen theme spaceship-prompt
 
-antigen theme geoffgarside
-
-antigen use oh-my-zsh
 antigen apply
 
 
@@ -67,6 +71,6 @@ prompt_end0() {
 
 unsetopt share_history
 
-autoload -U promptinit
-promptinit
-prompt fade blue
+# autoload -U promptinit
+# promptinit
+# prompt fade blue
